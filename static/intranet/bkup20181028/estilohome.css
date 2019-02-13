@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style the header 
+.header {
+    width: 100%;
+    height: 200px;
+    padding: 50px;
+    background-color: tomato;
+    animation-name: mudacor;
+    animation-duration: 10s;
+    animation-delay: 5s;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+}
+
+.header h2 {
+    font-family:  cursive;
+}
+
+
+@keyframes mudacor {
+    0%   {background-color: red;}
+    25%  {background-color: black;}
+    50%  {background-color: yellow;}
+    100% {background-color: grey;}
+
+}
+
+*/
+/* Menu */
+
+
+
+/* Fim Menu */
+.logointranet {
+  margin: 0;
+  color: #F66;
+  font-size: 32px;
+  font-family: sans-serif;
+}
+
+.logointranet h5 {
+  color: #999;
+}
+
+.frase1 h1 {
+  color: #F66;
+}
+
+.frase1 h3 {
+  color: #999;
+}
+
+.visao {
+  /*border: 1px solid #000;*/
+  width: 50%;
+  margin:0;
+  height: 150px;
+  float: right;
+  background-color: #F99;
+  padding: 20px;
+}
+
+.missao {
+  /*border: 1px solid #000;*/
+  background-color: #F66;
+  width: 50%;
+  height: 150px;
+  margin:0;
+  float: right;
+  padding: 10px;
+
+}
+
+.valores {
+  width: 100%;
+  background-color: #CCC;
+  padding: 20px;
+}
+
+/* imagem central */
+.imagem_gav img {
+  width: 100%;
+  height: 100%;
+}
+
+.imagem_lav img {
+  margin: 0;
+  width: 50%;
+  height: 400px;
+  float: right;
+  /*border: 5px solid #000;*/
+}
+
+.imagem_lgi img {
+  width: 50%;
+  height: 400px;
+  margin: 0;
+  /*border: 5px solid #000;*/
+
+

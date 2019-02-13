@@ -1,0 +1,19 @@
+{% extends 'intranet/base.html' %}
+{%load staticfiles%}
+
+{% block title %} Teste Form
+{% endblock title %}
+
+
+{% block body %}
+ <div class="section white">
+
+	<h4>Filtros Individuais</h4>
+	<form method="POST"> 
+		{% csrf_token %}
+		{{ form }}
+		<button type="submit"> Salvar </button>
+	</form>
+
+  </div>
+{% endblock body %}

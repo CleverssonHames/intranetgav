@@ -1,0 +1,40 @@
+{% extends 'intranet/base.html' %}
+{% load staticfiles %}
+
+{% block title %} Links {% endblock title %}
+
+{% block body %}
+    <div class="parallax-container">
+      <div class="parallax"><img src="{% static 'imagens/links.png' %}"></div>
+    </div>
+    <div class="section white">
+      <div class="row container">
+        <h4 class="header grey-text text-darken-1">Lojas</h4>
+        <p class="grey-text text-darken-3 lighten-3">
+        </p>
+      </div>
+    </div>
+
+    <div class="collection container">
+        {% for ll in linksite_lojas  %}
+            <a href={{ll.site}} class="collection-item"><span class="badge">{{ ll.tipo_acesso }}</span>{{ll.titulo}}</a>
+        {% endfor %}
+    </div>
+    <div class="section white">
+      <div class="row container">
+        <h4 class="header  grey-text text-darken-1">Escritórios e CD</h4>
+        <p class="grey-text text-darken-3 lighten-3">
+        </p>
+      </div>
+    </div>
+
+    <div class="collection container">
+        {% for le in linksite_escritorio  %}
+            <a href={{le.site}} class="collection-item"><span class="badge">{{ le.tipo_acesso }}</span>{{le.titulo}}</a>
+        {% endfor %}
+           
+    </div>
+    <div class="section white">
+    </div>
+{% endblock body %}
+

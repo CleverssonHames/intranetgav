@@ -1,0 +1,40 @@
+
+* {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.active {
+    background-color: #4CAF50;
+}
+
+/* Fim Menu */
+
+
+.tt_links {
+  color: #f66;
+}
+
+.grade-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  /*background-color:#CCC;*/
+  padding: 10px;
+}
+.grade-item {
+  /*background-color: #CCC;*/
+  /*border: 1px solid #ccc;*/
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  height: 150px;
+}
+
+.grade-ilem img {
+  width: 30%;
+  height: 30%;
+}

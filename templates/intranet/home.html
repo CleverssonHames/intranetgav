@@ -1,0 +1,60 @@
+{% extends 'intranet/base.html' %}
+{% load staticfiles %}
+
+{% block title %} Intranet AV {% endblock title %}
+
+{% block body %}
+    <div class="parallax-container">
+      <div class="parallax"><img src="{% static 'imagens/avenida.jpg' %}"></div>
+    </div>
+    <div class="section white">
+      <div class="row container">
+        <h2 class="header">Grupo Avenida</h2>
+        <p class="grey-text text-darken-3 lighten-3">A história do Grupo Avenida começou em 1978, em um espaço de 50m², no centro de Cuiabá. Fundada pelo empresário Ailton Caseli, a empresa hoje é a maior rede de varejo de moda do centro-norte e uma das 10 maiores do Brasil.
+        </p>
+        <p class="grey-text text-darken-3 lighten-3">
+          O Grupo Avenida conta com duas redes, Avenida e Giovanna, com mais de 100 lojas em 11 estados do Brasil, que conquistam o consumidor pelas peças que comercializam e pela agradável experiência de compra.
+        </p>
+        <p class="grey-text text-darken-3 lighten-3">
+          As redes de lojas Avenida e Giovanna marcam o consumidor não apenas por seus produtos e baixo preço, mas também pela preocupação com o ambiente em geral, já que todas as lojas são modernas, amplas e bem localizadas.
+        </p>
+      </div>
+    </div>
+    <div class="parallax-container">
+      <div class="parallax"><img src="{% static 'imagens/giovanna.jpg'%}"></div>
+    </div>
+     <div class="section white">
+      <div class="row container">
+        <ul class="collapsible">
+          <li>
+            <div class="collapsible-header">Missao</div>
+            <div class="collapsible-body"><span>Oferecer moda acessível para a família, sendo eficiente no modelo de atendimento assistido, buscando os melhores resultados para os colaboradores, parceiros e acionistas.</span></div>
+          </li>
+          <li>
+            <div class="collapsible-header">Visao</div>
+            <div class="collapsible-body"><span>Estar entre as 3 maiores redes de varejo de moda no Brasil no segmento de clientes e mercado onde atuamos.</span></div>
+          </li>
+          <li>
+            <div class="collapsible-header">Valores</div>
+            <div class="collapsible-body">
+              <span>
+              <h4>Respeito sem distinção</h4>
+              Respeitamos e tratamos bem todas as pessoas, independente de sua posição hierárquica ou social, raça, sexo, opção sexual, religião e partido político. Enfim, respeitamos e aprendemos com as diferenças.
+              <h4>Ética sem negociação</h4>
+               Agimos com honestidade e transparência em todas as relações, somos comprometidos em fazer sempre o que é correto, visando manter a integridade e idoneidade de todos que participam desta organização direta e indiretamente.
+              <h4>Excelência nos resultados</h4>
+              Buscamos superar os resultados almejados, melhorando continuamente e com espirito de equipe. Somos uma equipe dedicada, austera, e comprometida com as diretrizes da organização, em busca da sua sustentabilidade.
+              <h4>Valorização das pessoas</h4>
+              Acreditamos nas pessoas como fonte inesgotável de energia, determinação e fé, que por meio delas é que chegamos aos melhores e maiores resultados. Por isso, cuidamos, desenvolvemos, reconhecemos e valorizamos àqueles que dão o melhor de si para a entrega de resultados excelentes. 
+              <h4>Simplicidade, simples assim!</h4>
+              Agimos com humildade e simplicidade e não com simplismo e ignorância, por isso somos acessíveis e estamos sempre abertos a sugestões e novas ideias, pois acreditamos que precisamos aprofundar no que é importante e facilitar o que é urgente.
+              <h4>Espírito de dono</h4>
+              Pensamos e agimos como dono do negócio, que nasceu para evoluir e vencer, é leal ao seu time, cuida minuciosamente dos recursos e imagem da empresa, prioriza os objetivos coletivos ao individual, e supera qualquer dificuldade em prol de um sonho e um propósito.
+              <h4>Atenção ao cliente! A origem de tudo</h4>
+              Estamos sempre atentos às necessidades dos nossos clientes, seus comportamentos e valores, a fim de agregar valor com nossos produtos e serviços, bem como prestar um atendimento com excelência. Ele é a origem de tudo que fazemos.
+            </span></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+{% endblock body %}

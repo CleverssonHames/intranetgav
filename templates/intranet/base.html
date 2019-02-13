@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html lang="pt" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'intranet/materialize.min.css' %}">
+    <title>
+      {% block title %} {% endblock title %}
+    </title>
+  </head>
+  <body>
+
+    <!-- Cabeçalho -->
+  <nav class='grey darken-1   '>
+    <div class="nav-wrapper container">
+      <a href="#!" class="brand-logo"> <img height="70px" src="{% static 'imagens/logo_grupo_avenida.png' %}"></a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/">Home</a></li>
+        <li><a href="links">Links</a></li>
+        <li><a href="departamento">Departamentos</a></li>
+        <li><a href="lojas">Lojas</a></li>
+      </ul>
+
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="/">Home</a></li>
+        <li><a href="links">Links</a></li>
+        <li><a href="departamento">Departamentos</a></li>
+        <li><a href="lojas">Lojas</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  {% block body %}
+          
+  {% endblock body %} 
+  <!-- Rodapé -->
+  <footer class="page-footer grey darken-1 ">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Grupo Avenida</h5>
+          <p class="grey-text text-lighten-4">Desenvolvido pelo TI do Grupo Avenida.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Páginas</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="/">Home</a></li>
+            <li><a class="grey-text text-lighten-3" href="links">Links</a></li>
+            <li><a class="grey-text text-lighten-3" href="departamento">Departamentos</a></li>
+            <li><a class="grey-text text-lighten-3" href="lojas">Lojas</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2018 Copyright | Todos os direitos reservados ao Grupo Avenida
+      <a class="grey-text text-lighten-4 right" href="#!"></a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Jquery -->
+  <script src="{% static 'intranet/js/jquery-3.3.1.min.js' %}"></script>
+
+  <!-- Menu responsivo -->
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+    $('.sidenav').sidenav();
+    });
+  </script>
+
+  <!-- paralaxe -->
+
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('.parallax').parallax();
+  });
+  </script>
+
+  <!-- Collapse -->
+  <script type="text/javascript">
+    $(document).ready(function(){
+    $('.collapsible').collapsible();
+    });     
+  </script>
+
+  {% block jquery %}
+  {% endblock jquery %}
+
+   <!-- tabs -->
+
+   <script type="text/javascript">
+    $(document).ready(function(){
+    $('.tabs').tabs();
+    });
+  </script>
+
+
+
+  <!-- javascript -->
+  <script src="{% static 'intranet/js/materialize.min.js' %}"></script>
+
+      
+</body>
+</html>

@@ -1,0 +1,86 @@
+{% extends 'intranet/base.html' %}
+{%load staticfiles%}
+
+{% block title %} Empresas
+{% endblock title %}
+
+
+{% block body %}
+
+  <div class="section  white">	
+	<div class="row container">
+	</div>
+  </div>
+	
+  <!-- LISTA AS EMPRESAS CONFORME FILTRO SELECIONADO --> 
+  <div class="row container">
+	<div class="col s9">
+		 {% for emp in empresas  %}
+			<ul class="collection">
+			  <li class="collection-item avatar">
+				<i class="material-icons circle green">business</i>
+				<span class="title"><strong>{{ emp.filial }}</strong></span>
+				<p> <strong>Rede:</strong> {{ emp.bandeira }} </br>
+					<strong>Cidade:</strong> {{ emp.cidade }} <strong>UF:</strong> {{ emp.estado }} <br>
+					<strong>Bairro:</strong> {{ emp.bairro }} <strong>Endereço:</strong> {{ emp.logradouro }} <strong>CEP:</strong> {{ emp.cep }}</br>
+					<strong>CNPJ:</strong> {{ emp.cnpj }}</br>
+					<strong>Tel. Fixo:</strong> {{ emp.tel_fixo }} <strong>Celular 1:</strong> {{ emp.celular_1 }} <strong>Celular 2:</strong> {{ emp.celular_2 }}  
+				</p>
+				<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+			  </li>
+			</ul>
+		  {% endfor %}
+	</div>
+	
+	<div class="col s3">
+		<h5>Filtros: </h5>
+		  
+		<select>
+			<option value="" disabled selected>Escolha uma empresas</option>
+			{% for emp in empresas %}
+			<option value="1"><a href="{% url 'filtro_loja' emp.filial %}">{{ emp.filial }}</a></option>
+			{% endfor %}
+		</select>
+
+		<select>
+			<option value="" disabled selected>Escolha uma empresas</option>
+			{% for emp in empresas %}
+			<option value="1"><a href="{% url 'filtro_loja' emp.filial %}">{{ emp.estado }}</a></option>
+			{% endfor %}
+		</select>	   
+
+	<div class="section white">
+		  <div class="row">
+			<div class="section  white">	
+				<div class="row container">
+				</div>
+			</div>
+			
+			<h5>Filtros fixos: </h5>
+			<a href="empresa_avenida" class="btn-flat "><span class="blue-text text-darken-2">| Lojas Avenida</span></a> </br>
+			<a href="empresa_giovanna" class="btn-flat "><span class="blue-text text-darken-2">| Lojas Giovanna</span></a> </br>
+			<a href="empresa_esc" class="btn-flat "><span class="blue-text text-darken-2">| Escritorios</span></a> </br>
+			<a href="empresa_cd" class="btn-flat "><span class="blue-text text-darken-2">| Centro de Distribuicao</span></a> </br>
+		</div>
+	</div>
+  </div>
+ </div>
+  
+  {% block jquery %}
+  
+   <!-- Model -->
+   <script type="text/javascript">
+    $(document).ready(function(){
+    $('.modal').modal();
+	});
+	</script>
+	
+	<script type="text/javascript">
+	 $(document).ready(function(){
+		$('select').formSelect();
+	 });
+	 </script>
+	   
+  {% endblock jquery %}
+  
+{% endblock body %}
