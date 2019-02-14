@@ -30,7 +30,7 @@
 
     <div class="collection container">
         {% for le in linksite_escritorio  %}
-            <a href={{le.site}} class="collection-item"><span class="badge">{{ le.tipo_acesso }}</span>{{le.titulo}}</a>
+            <a href={{le.site}} target="_blank" class="collection-item"><span class="badge">{{ le.tipo_acesso }}</span>{{le.titulo}}</a>
         {% endfor %}
            
     </div>
