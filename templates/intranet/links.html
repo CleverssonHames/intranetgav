@@ -17,7 +17,7 @@
 
     <div class="collection container">
         {% for ll in linksite_lojas  %}
-            <a href={{ll.site}} class="collection-item"><span class="badge">{{ ll.tipo_acesso }}</span>{{ll.titulo}}</a>
+            <a href={{ll.site}} target="_blank" class="collection-item"><span class="badge">{{ ll.tipo_acesso }}</span>{{ll.titulo}}</a>
         {% endfor %}
     </div>
     <div class="section white">
