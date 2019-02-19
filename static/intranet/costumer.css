@@ -1,5 +1,3 @@
- .parallax-container {
-    line-height: 0;
-    height: 300px;
-    color: rgb(255,255,255,.9);
-  }
+.parallax-container {
+  height: 300px;
+}
