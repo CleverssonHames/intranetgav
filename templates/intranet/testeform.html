@@ -53,4 +53,22 @@
 
   </div>
  </div>
+
+ {% block jquery %}
+  
+ <!-- Model -->
+ <script type="text/javascript">
+	$(document).ready(function(){
+	$('.modal').modal();
+});
+</script>
+
+<script type="text/javascript">
+ $(document).ready(function(){
+	$('select').formSelect();
+ });
+ </script>
+	 
+{% endblock jquery %}
+
 {% endblock body %}
