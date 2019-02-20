@@ -37,6 +37,8 @@
 		<h5>Filtros: </h5>
 			
 		<form name=FilialBox action="{% url 'empresa_avenida' %}" method="POST">
+				{% csrf_token %}
+				{{ form }}
 			<select name=ComboFilial size=1 onchange="FilialBox.submit();">
 				<option value="" disabled selected>Filial</option>
 				{% for emp in empresas %}
