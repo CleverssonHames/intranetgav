@@ -52,6 +52,9 @@ def filtro_cidade(resquest, cidade):
 def filtro_estado(resquest, estado):
 	festado = Filial.objects.filter(estado=estado)
 	return render(request, 'intranet/lojas.html', {'festado':festado})
+
+def teste(request):
+	return render(request, 'intranet/testeform.html', {})
 	
 	
 	
