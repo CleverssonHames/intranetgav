@@ -36,7 +36,7 @@
 	<div class="col s3">
 		<h5>Filtros: </h5>
 			
-		<form name=FilialBox action="" method="POST">
+		<form name=FilialBox action="{% url 'empresa_avenida' %}" method="POST">
 			<select name=ComboFilial size=1 onchange="FilialBox.submit();">
 				<option value="" disabled selected>Filial</option>
 				{% for emp in empresas %}
