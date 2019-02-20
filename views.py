@@ -54,7 +54,10 @@ def filtro_estado(resquest, estado):
 	return render(request, 'intranet/lojas.html', {'festado':festado})
 
 def teste(request):
-	return render(request, 'intranet/testeform.html', {})
+	empresas = Filial.objects.all().order_by('filial')
+	estados = Filial.objects.values('estado').distinct()
+	cidades = Filial.objects.values('cidade').distinct()
+	return render(request, 'intranet/testeform.html', {'empresas':empresas, 'cidades': cidades, 'estados':estados})
 	
 	
 	
