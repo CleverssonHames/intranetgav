@@ -8,11 +8,36 @@
 {% block body %}
  <div class="section white">
 
-	<h4>Filtros Individuais</h4>
-	<form method="POST"> 
+	<div class="row container">
+		<div class="col s9">
+			 {% for emp in empresas  %}
+				<ul class="collection">
+					<li class="collection-item avatar">
+					<i class="material-icons circle green">business</i>
+					<span class="title"><strong>{{ emp.filial }}</strong></span>
+					<p> 
+						<strong>Rede:</strong> {{ emp.bandeira }} </br>
+						<strong>Cidade:</strong> {{ emp.cidade }} <strong>UF:</strong> {{ emp.estado }} <br>
+						<strong>Bairro:</strong> {{ emp.bairro }} <strong>Endereço:</strong> {{ emp.logradouro }} <strong>CEP:</strong> {{ emp.cep }}</br>
+						<strong>CNPJ:</strong> {{ emp.cnpj }}</br>
+						<strong>Tel. Fixo:</strong> {{ emp.tel_fixo }} <strong>Celular 1:</strong> {{ emp.celular_1 }} <strong>Celular 2:</strong> {{ emp.celular_2 }}  
+					</p>
+					<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+					</li>
+				</ul>
+				{% endfor %}
+		</div>
+
+	<form name="TipoBox" action="" method="POST"> 
 		{% csrf_token %}
 		{{ form }}
-		<button type="submit"> Salvar </button>
+		<select name=ComboName size=1 onchange="TipoBox.submit();">
+			<option value="" SELECTED>Escolha um...</option>
+			{% for emp in empresas %}
+			<option value="1">Teste</option>
+			<option value="2">Teste 3</option>
+			{% endfor %}
+	</select>
 	</form>
 
   </div>
