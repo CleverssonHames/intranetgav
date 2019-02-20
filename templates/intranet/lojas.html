@@ -38,34 +38,31 @@
 			
 		
 		<select>
-			<option value="" disabled selected>Escolha uma empresas</option>
+			<option value="" disabled selected>Filial</option>
 			{% for emp in empresas %}
 			<option value="1"><a href="">{{ emp.filial }}</a></option>
 			{% endfor %}
 		</select>
 
 		<select>
-			<option value="" disabled selected>Escolha uma empresas</option>
+			<option value="" disabled selected>Estado</option>
 			{% for emp in empresas %}
 			<option value="1"><a href="">{{ emp.estado }}</a></option>
 			{% endfor %}
 		</select>
-		 
 
-	<div class="section white">
-		  <div class="row">
-			<div class="section  white">	
-				<div class="row container">
-				</div>
-			</div>
-			
-			<h5>Filtros fixos: </h5>
-			<a href="empresa_avenida" class="btn-flat "><span class="blue-text text-darken-2">| Lojas Avenida</span></a> </br>
-			<a href="empresa_giovanna" class="btn-flat "><span class="blue-text text-darken-2">| Lojas Giovanna</span></a> </br>
-			<a href="empresa_esc" class="btn-flat "><span class="blue-text text-darken-2">| Escritorios</span></a> </br>
-			<a href="empresa_cd" class="btn-flat "><span class="blue-text text-darken-2">| Centro de Distribuicao</span></a> </br>
-		</div>
-	</div>
+		<select>
+			<option value="" disabled selected>Bandeira</option>
+			<option value="1"><a href="empresa_avenida">Avenida</a></option>
+			<option value="2"><a href="empresa_giovanna">Lojas Giovanna</a></option>
+		</select>
+
+		<select>
+			<option value="" disabled selected>Tipo</option>
+			<option value="1"><a href="empresa_esc">Escritorios</a></option>
+			<option value="2"><a href="empresa_cd">Centro de Distribuicao</a></option>
+		</select>
+		 
   </div>
  </div>
   
