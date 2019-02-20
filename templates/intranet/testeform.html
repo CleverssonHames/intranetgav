@@ -33,17 +33,19 @@
 		  {% endfor %}
 	</div>
 
-	<form name="TipoBox" action="" method="POST"> 
-		{% csrf_token %}
-		{{ form }}
-		<select name=ComboName size=1 onchange="TipoBox.submit();">
-			<option value="" SELECTED>Escolha um...</option>
-			{% for emp in empresas %}
-			<option value="1">Teste</option>
-			<option value="2">Teste 3</option>
-			{% endfor %}
-	</select>
-	</form>
+	<div class="col s3">
+		<form name="TipoBox" action="" method="POST"> 
+			{% csrf_token %}
+			{{ form }}
+			<select name=ComboName size=1 onchange="TipoBox.submit();">
+				<option value="" SELECTED>Escolha um...</option>
+				{% for emp in empresas %}
+				<option value="1">Teste</option>
+				<option value="2">Teste 3</option>
+				{% endfor %}
+			</select>
+		</form>
+</div>
 
   </div>
 {% endblock body %}
