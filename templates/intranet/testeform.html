@@ -6,27 +6,31 @@
 
 
 {% block body %}
- <div class="section white">
-
+<div class="section  white">	
 	<div class="row container">
-		<div class="col s9">
-			 {% for emp in empresas  %}
-				<ul class="collection">
-					<li class="collection-item avatar">
-					<i class="material-icons circle green">business</i>
-					<span class="title"><strong>{{ emp.filial }}</strong></span>
-					<p> 
-						<strong>Rede:</strong> {{ emp.bandeira }} </br>
-						<strong>Cidade:</strong> {{ emp.cidade }} <strong>UF:</strong> {{ emp.estado }} <br>
-						<strong>Bairro:</strong> {{ emp.bairro }} <strong>Endereço:</strong> {{ emp.logradouro }} <strong>CEP:</strong> {{ emp.cep }}</br>
-						<strong>CNPJ:</strong> {{ emp.cnpj }}</br>
-						<strong>Tel. Fixo:</strong> {{ emp.tel_fixo }} <strong>Celular 1:</strong> {{ emp.celular_1 }} <strong>Celular 2:</strong> {{ emp.celular_2 }}  
-					</p>
-					<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-					</li>
-				</ul>
-				{% endfor %}
-		</div>
+	</div>
+  </div>
+	
+  <!-- LISTA AS EMPRESAS CONFORME FILTRO SELECIONADO --> 
+  <div class="row container">
+	<div class="col s9">
+		 {% for emp in empresas  %}
+			<ul class="collection">
+			  <li class="collection-item avatar">
+				<i class="material-icons circle green">business</i>
+				<span class="title"><strong>{{ emp.filial }}</strong></span>
+				<p> 
+					<strong>Rede:</strong> {{ emp.bandeira }} </br>
+					<strong>Cidade:</strong> {{ emp.cidade }} <strong>UF:</strong> {{ emp.estado }} <br>
+					<strong>Bairro:</strong> {{ emp.bairro }} <strong>Endereço:</strong> {{ emp.logradouro }} <strong>CEP:</strong> {{ emp.cep }}</br>
+					<strong>CNPJ:</strong> {{ emp.cnpj }}</br>
+					<strong>Tel. Fixo:</strong> {{ emp.tel_fixo }} <strong>Celular 1:</strong> {{ emp.celular_1 }} <strong>Celular 2:</strong> {{ emp.celular_2 }}  
+				</p>
+				<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+			  </li>
+			</ul>
+		  {% endfor %}
+	</div>
 
 	<form name="TipoBox" action="" method="POST"> 
 		{% csrf_token %}
