@@ -1,3 +1,9 @@
 .parallax-container {
   height: 300px;
 }
+.lista-empresas{
+  list-style: none;
+}
+.lista-empresas a{
+  text-decoration: none;
+}

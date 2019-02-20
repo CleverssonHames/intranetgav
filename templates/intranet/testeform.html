@@ -35,8 +35,15 @@
 	
 	<div class="col s3">
 		<h5>Filtros: </h5>
-		<p>
-			<a href="empresa_avenida">Avenida</a> <a href="empresa_giovanna">Giovanna</a></p>
+
+		<ul class="lista-empresas">
+			<li>
+				<a href="empresa_avenida">Avenida</a>
+				<a href="empresa_giovanna">Giovanna</a>
+				<a href="empresa_cd">Centro de Distribuição</a>
+				<a href="empresa_esc">Escritório</a>
+			</li>
+		</ul>
 		<form name=FilialBox action="{% url 'empresa_avenida' %}" method="POST">
 				{% csrf_token %}
 				{{ form }}
