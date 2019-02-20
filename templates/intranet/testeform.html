@@ -36,21 +36,21 @@
 	<div class="col s3">
 		<h5>Filtros: </h5>
 			
-		
-		<select>
-			<option value="" disabled selected>Filial</option>
-			{% for emp in empresas %}
-			<option value="1"><a href="">{{ emp.filial }}</a></option>
-			{% endfor %}
-		</select>
+		<form name=FilialBox action="" method="POST">
+			<select name=ComboFilial size=1 onchange="FilialBox.submit();">
+				<option value="" disabled selected>Filial</option>
+				{% for emp in empresas %}
+				<option value="1"><a href="">{{ emp.filial }}</a></option>
+				{% endfor %}
+			</select>
 
-		<select>
-			<option value="" disabled selected>Estado</option>
-			{% for emp in empresas %}
-			<option value="1"><a href="">{{ emp.estado }}</a></option>
-			{% endfor %}
-		</select>
-
+			<select>
+				<option value="" disabled selected>Estado</option>
+				{% for emp in empresas %}
+				<option value="1"><a href="">{{ emp.estado }}</a></option>
+				{% endfor %}
+			</select>
+		</form>
   </div>
  </div>
 
