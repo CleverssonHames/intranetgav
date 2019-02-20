@@ -35,14 +35,15 @@
 	
 	<div class="col s3">
 		<h5>Filtros: </h5>
-		<p><a href="empresa_avenida">Avenida</a></p>
+		<p>
+			<a href="empresa_avenida">Avenida</a> <a href="empresa_giovanna">Giovanna</a></p>
 		<form name=FilialBox action="{% url 'empresa_avenida' %}" method="POST">
 				{% csrf_token %}
 				{{ form }}
 			<select name=ComboFilial size=1 onchange="FilialBox.submit();">
 				<option value="" disabled selected>Filial</option>
 				{% for emp in empresas %}
-				<option value="1">{{ emp.filial }}</option>
+				<option value="{{ emp.filial }}">{{ emp.filial }}</option>
 				{% endfor %}
 			</select>
 
