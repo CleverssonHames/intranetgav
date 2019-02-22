@@ -36,9 +36,8 @@
 	<div class="col s3">
 		<h5>Filtros: </h5>
 			
-		<form action="{% url 'filtro_loja' emp.id %}">
+		<form action="{% url 'filtro_loja' pk=emp.id %}" method="POST">
 				{% csrf_token %}
-				{{ form }}
 		  <select>
 			  <option value="" disabled selected>Filial</option>
 			  {% for emp in empresas %}
