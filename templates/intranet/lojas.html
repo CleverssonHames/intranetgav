@@ -37,7 +37,7 @@
 		<h5>Filtros: </h5>
 			
 		
-		<select>
+		<select class="formSelect">
 			<option value="" disabled selected>Filial</option>
 			{% for emp in empresas %}
 			<option value="1"><a href="{% url 'filtro_loja' emp.id %}">{{ emp.filial }}</a></option>
