@@ -15,7 +15,7 @@ urlpatterns = [
    path('empresa_cd', views.empresa_cd, name='empresa_cd'),
    path('empresa_esc', views.empresa_esc, name='empresa_esc'),
    path('teste', views.teste, name='teste'),
-   #path('filtro_loja/<int:pk>/', views.filtro_loja, name='filtro_loja')
+   path('filtro_loja/<int:pk>', views.filtro_loja, name='filtro_loja')
    #path('form_emp', views.form_emp, name='form_emp'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
