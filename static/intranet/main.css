@@ -2,9 +2,12 @@
 .box-destino{
     width: 270px;
     top: 61px;
+    margin-left: 20px;
 }
 .box-remete{
     width: 270px;
+    top: 61px;
+    margin-left: 20px;
 }
 .lateral{
     background-color: yellow;
