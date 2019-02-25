@@ -6,10 +6,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 .box-destino{
-    width:100px;  /* Tamanho final do select */
-    overflow:hidden; /* Esconde o conteúdo que passar do tamanho especificado */
-    position: relative;
-    bottom: 35px;
+    bottom: 50px;
     left: 100px;
 }
 .box-destino select{
