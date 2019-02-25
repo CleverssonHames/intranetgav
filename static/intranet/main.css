@@ -1,4 +1,8 @@
 /* Inicio da seção Seção de seleção do remetente e destinatario */
+.corpo{
+    height: 700px;
+    width: 1903px;
+}
 .box-destino{
     width: 270px;
     top: 61px;
