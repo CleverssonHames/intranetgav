@@ -1,9 +1,9 @@
 /* Inicio da seção Seção de seleção do remetente e destinatario */
 
-.corpo{
+/* .corpo{
     width: 1330px;
     height: 768px;
-}
+} */
 .destinatario{
     position: absolute;
     left: 20px;
@@ -163,7 +163,7 @@
 }
 /* Fim Etiqueta - Remetente */
 
-.button {
+/* .button {
     background-color: black;
     border: none;
     color: white;
@@ -178,8 +178,8 @@
     top: 95px;
     left: 77px;
     top: 205px;
-}
-.button-2{
+} */
+/* .button-2{
     background-color: black;
     border: none;
     color: white;
@@ -194,7 +194,7 @@
     top: 95px;
     left: 77px;
     top: 265px;
-}
+} */
 @media print{
     .impressao{
         margin: 0;
