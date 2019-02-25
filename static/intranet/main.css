@@ -1,10 +1,8 @@
 /* Inicio da seção Seção de seleção do remetente e destinatario */
 .destinatario{
     position: absolute;
-    width: 90px;
     left: 20px;
     top: 120px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 .box-destino{
     bottom: 50px;
@@ -18,7 +16,6 @@
     position: absolute;
     top: 150px;
     left: 20px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 .box-remete{
     width: 100px;  /* Tamanho final do select */
