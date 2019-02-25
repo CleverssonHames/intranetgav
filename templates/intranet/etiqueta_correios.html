@@ -1,0 +1,76 @@
+{% extends 'intranet/base.html' %}
+{%load staticfiles%}
+
+{% block title %} etiqueta_correio
+{% endblock title %}
+
+
+{% block body %}
+<body class="corpo impressao">
+
+    <section class="noprint">
+        <div class="lateral">
+            <div class="destinatario">
+                <p>Destinatário:</p>
+                    <div class="box-destino">
+                        <select name="" id="">
+                            <option value="1">teste</option>
+                        </select>
+                    </div>
+            </div>
+            <div Class="remetente">
+                <p>Remetente:</p>    
+                <div class="box-remete impressao">
+                    <select name="" id="">
+                        <option value="1">teste 1</option>
+                    </select>
+                </div>
+            </div>
+            <input type="button" class="button" value="Gerar">
+        </div>
+    </section>
+
+    <div class="recorte impressao">
+        <div class="layout-destino">
+            <img src="rect4807.png" alt="">
+            <p class="nome_destino">Wlademar fregnani</p>
+            <p class="endereco_destino">Rua Capiberibe, 269</p>
+            <p class="complemento_destino">Apto. 269</p>
+            <p class="bairro_destino">Vila Dainese</p>
+            <p class="cep_destino">13469-070</p>
+            <p class="cidade_destino">Americana-SP</p>
+        </div>
+        
+
+
+    
+        <div class="layout-remete remetente-impressao impressao">
+            <span class="layout-remete_titulo">Remetente:</span>
+            <span>leonardo fregnani</span>
+            <span class="layout-remete_endereco">rua tangará, 0004</span>
+            <span class="layout-remete_complemento">quadra 07</span>
+            <span class="layout-remete_bairro">recanto dos pássaros</span>
+            <span class="layout-remete_cep">78074-010</span>
+            <span class="layout-remete_cidade">cuiabá-MT</span>
+        </div>
+    
+
+ 
+
+        <div class="espaco_codigo_id">
+            <img src="rect4806.png" alt="">
+            <p class="espaco_codigo_id-linha1">uso exclusivo dos correios</p>
+            <p class="espaco_codigo_id-linha2">cole aqui a etiqueta com o código identificador da encomenda</p>
+        </div>
+    </div>
+    <!-- <div class="espaco_codigo_id">
+        <img src="rect4806.png" alt="">
+        <p class="espaco_codigo_id-linha1">uso exclusivo dos correios</p>
+        <p class="espaco_codigo_id-linha2">cole aqui a etiqueta com o código identificador da encomenda</p>
+    </div> -->
+
+
+            <form>
+                <input class="button-2 noprint" type="button" value="Imprimir"  class="noprint" onclick="window.print();return false;"/>
+            </form>
+{% endblock body %}
