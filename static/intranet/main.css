@@ -1,8 +1,8 @@
 /* Inicio da seção Seção de seleção do remetente e destinatario */
 .destinatario{
-    position: absolute;
-    left: 20px;
-    top: 120px;
+    position: relative;
+    top: 60px;
+    margin-left: 10px;
 }
 .box-destino{
     bottom: 50px;
@@ -17,11 +17,9 @@
     left: 20px;
 }
 .box-remete{
-    width: 100px;  /* Tamanho final do select */
-    overflow:hidden; /* Esconde o conteúdo que passar do tamanho especificado */
     position: relative;
-    bottom: 36px;
-    left: 100px;
+    top: 60px;
+    margin-left: 10px;
 }
 .box-remete select{
     width: 100px; /* Tamanho do select, maior que o tamanho da div "div-select" */
