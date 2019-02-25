@@ -3,6 +3,10 @@
     height: 700px;
     width: 1903px;
 }
+.corpo-2{
+    bottom: 13px;
+    position: relative;
+}
 .box-destino{
     width: 270px;
     top: 61px;
