@@ -6,9 +6,9 @@
 
 
 {% block body %}
-<body class="corpo impressao">
+<section class="corpo impressao">
 
-    <section class="noprint">
+    <div class="noprint">
         <div class="lateral">
             <div class="destinatario">
                 <p>Destinatário:</p>
@@ -30,7 +30,7 @@
                 <input class="waves-effect waves-light btn grey darken-4 button" type="button" value="Gerar"/>
             </form>
         </div>
-    </section>
+    </div>
 
     <div class="recorte impressao">
         <div class="layout-destino">
@@ -73,6 +73,7 @@
 
 
             <form>
-                <input class="waves-effect waves-light btn grey darken-4 noprint" type="button" value="Imprimir" onclick="window.print();return false;"/>
+                <input class="waves-effect waves-light btn grey darken-4 noprint button-2" type="button" value="Imprimir" onclick="window.print();return false;"/>
             </form>
+</section>
 {% endblock body %}

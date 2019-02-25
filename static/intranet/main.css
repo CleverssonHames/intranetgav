@@ -42,8 +42,6 @@
     background-color: yellow;
     height: 768px;
     width: 280px;
-    margin-left: -7px;
-    margin-top: -7px;
 }
 /* Fim da Seção de seleção do remetente e destinatario */
 
@@ -154,7 +152,7 @@
 }
 .recorte{
     position: absolute;
-    top: 50px;
+    top: 100px;
     border-style: dashed;
     border-color: lightgrey;
     height: 565px;
@@ -168,22 +166,11 @@
     top: 145px;
     margin-left: 76px;
 }
-/* .button-2{
-    background-color: black;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    position: absolute;
-    top: 95px;
-    left: 77px;
-    top: 265px;
-} */
+.button-2{
+    position: relative;
+    bottom: 580px;
+    margin-left: 59px;
+}
 @media print{
     .impressao{
         margin: 0;
