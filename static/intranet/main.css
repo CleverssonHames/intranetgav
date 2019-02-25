@@ -2,6 +2,8 @@
 .corpo{
     height: 700px;
     width: 1903px;
+    position: relative;
+    bottom: 13px;
 }
 .corpo-2{
     bottom: 13px;
