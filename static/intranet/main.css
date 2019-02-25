@@ -1,6 +1,7 @@
 /* Inicio da seção Seção de seleção do remetente e destinatario */
 .destinatario{
     position: absolute;
+    width: 90px;
     left: 20px;
     top: 120px;
     font-family: Arial, Helvetica, sans-serif;
