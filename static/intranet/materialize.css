@@ -5647,7 +5647,6 @@ body.keyboard-focused .dropdown-content li:focus {
   transition: .3s ease-out;
   bottom: 560px;
   margin-left: 78px;
-  color: white;
 }
 
 .waves-effect .waves-ripple {
