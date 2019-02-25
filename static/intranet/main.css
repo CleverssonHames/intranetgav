@@ -1,13 +1,6 @@
 /* Inicio da seção Seção de seleção do remetente e destinatario */
-.destinatario{
-    margin-left: 10px;
-}
 .box-destino{
-    left: 10px;
-}
-.box-destino select{
-      width: 100px; /* Tamanho do select, maior que o tamanho da div "div-select" */
-      height: 25px; /* altura do select, importante para que tenha a mesma altura em todo os navegadores */
+    width: 270px;
 }
 .remetente{
     top: 150px;
