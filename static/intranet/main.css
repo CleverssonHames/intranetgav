@@ -13,7 +13,6 @@
       height: 25px; /* altura do select, importante para que tenha a mesma altura em todo os navegadores */
 }
 .remetente{
-    position: absolute;
     top: 150px;
     left: 20px;
 }
