@@ -65,11 +65,3 @@ def etiqueta_correio(request):
 	# estados = Filial.objects.values('estado').distinct()
 	# cidades = Filial.objects.values('cidade').distinct()
 	# return render(request, 'intranet/etiqueta_correio.html', {'empresas':empresas, 'cidades': cidades, 'estados':estados})
-
-
-	
-	
-	
-
-
-
