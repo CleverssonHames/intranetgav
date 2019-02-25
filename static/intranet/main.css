@@ -133,14 +133,13 @@
 /* Fim Etiqueta - Remetente */
 
 .botao_gerar {
-    position: relative;
-    top: 145px;
+    bottom: 550px;
     margin-left: 76px;
 }
-.button-2{
+.botao_imprimir{
     position: relative;
-    bottom: 580px;
-    margin-left: 59px;
+    bottom: 540px;
+    margin-left: 66px;
 }
 @media print{
     .impressao{
