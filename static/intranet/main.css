@@ -12,7 +12,7 @@
 .lateral{
     background-color: yellow;
     height: 768px;
-    width: 280px;
+    width: 320px;
 }
 /* Fim da Seção de seleção do remetente e destinatario */
 
@@ -132,7 +132,7 @@
 }
 /* Fim Etiqueta - Remetente */
 
-.button {
+.botao_gerar {
     position: relative;
     top: 145px;
     margin-left: 76px;
