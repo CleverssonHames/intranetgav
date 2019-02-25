@@ -8,15 +8,24 @@
 {% block body %}
 <section>
 
-    <div class="section  white">
+    <div>
         <div class="lateral noprint">
             <div class="destinatario">
                 <p>Destinatário:</p>
-                    <div class="box-destino">
+                    <div class="input-field col s12">
+                            <select>
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                        <label>Materialize Select</label>
+                    </div>
+                    <!-- <div class="box-destino">
                         <select>
                             <option value="1">teste</option>
                         </select>
-                    </div>
+                    </div> -->
             </div>
             <div Class="remetente">
                 <p>Remetente:</p>    
@@ -76,4 +85,22 @@
                 <input class="waves-effect waves-light btn grey darken-4 noprint button-2" type="button" value="Imprimir" onclick="window.print();return false;"/>
             </form>
 </section>
+
+{% block jquery %}
+  
+<!-- Model -->
+    <script type="text/javascript">
+        $(document).ready(function(){
+        $('.modal').modal();
+        });
+    </script>
+    
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('select').formSelect();
+        });
+    </script>
+    
+{% endblock jquery %}
+
 {% endblock body %}
