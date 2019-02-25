@@ -10,10 +10,6 @@
     top: 40px;
     margin-left: 20px;
 }
-.box-remete select{
-    width: 100px; /* Tamanho do select, maior que o tamanho da div "div-select" */
-    height: 25px; /* altura do select, importante para que tenha a mesma altura em todo os navegadores */
-}
 .lateral{
     background-color: yellow;
     height: 768px;
