@@ -1,10 +1,7 @@
 /* Inicio da seção Seção de seleção do remetente e destinatario */
 .box-destino{
     width: 270px;
-}
-.remetente{
-    top: 150px;
-    left: 20px;
+    top: 61px;
 }
 .box-remete{
     width: 270px;
