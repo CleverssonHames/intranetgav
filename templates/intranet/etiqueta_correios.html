@@ -16,7 +16,7 @@
                                 {% csrf_token %}
                                 {{ form }}
                                 <select name="combo-destino" size="1">
-                                    <option value="" disabled selected>Escolha o Destinatário</option>
+                                    <option value="1" disabled selected>Escolha o Destinatário</option>
                                     {% for emp in empresas %}
                                     <option value="{{ emp.filial }}">{{ emp.filial }}</option>
                                     {% endfor %}
