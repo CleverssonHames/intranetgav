@@ -42,8 +42,8 @@ def empresa_esc(request):
 	return render(request, 'intranet/lojas.html', {'empresas': empresas})
 	
 def filtro_loja(resquest, pk):
-	floja = Filial.objects.filter(pk=pk)
-	return render(request, 'intranet/lojas.html', {'floja':floja})
+	empresas = Filial.objects.filter(pk=pk)
+	return render(request, 'intranet/lojas.html', {'empresas':empresas})
 	
 def filtro_cidade(resquest, cidade):
 	fcidade = Filial.objects.filter(cidade=cidade)

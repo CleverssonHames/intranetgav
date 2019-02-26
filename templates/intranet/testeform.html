@@ -50,7 +50,7 @@
 					<a href="empresa_esc">Escritório</a>
 			</li>
 		</ul>
-		<form name=FilialBox action="{% url 'empresa_avenida' %}" method="POST">
+		<form name=FilialBox action="{% url 'filtro_loja' emp.id %}" method="POST">
 				{% csrf_token %}
 				{{ form }}
 			<select name=ComboFilial size=1 onchange="FilialBox.submit();">
