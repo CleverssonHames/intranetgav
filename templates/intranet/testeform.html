@@ -50,7 +50,7 @@
 					<a href="empresa_esc">Escritório</a>
 			</li>
 		</ul>
-		<form name=FilialBox action="{% url 'filtro_loja' emp.id %}" method="POST">
+		<form name=FilialBox action="{% url 'filtro_loja' %}" method="POST">
 				{% csrf_token %}
 				{{ form }}
 			<select name=ComboFilial size=1 onchange="FilialBox.submit();">
@@ -63,7 +63,7 @@
 			<select>
 				<option value="" disabled selected>Estado</option>
 				{% for emp in empresas %}
-				<option value="1"><a href="">{{ emp.estado }}</a></option>
+				<option value="1"><a href="">{{ emp.id }}{{ emp.estado }}</a></option>
 				{% endfor %}
 			</select>
 		</form>
