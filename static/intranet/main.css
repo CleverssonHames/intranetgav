@@ -145,11 +145,13 @@
 .botao_gerar {
     bottom: 550px;
     margin-left: 76px;
+    color: #fff;
 }
 .botao_imprimir{
     position: relative;
     bottom: 540px;
     margin-left: 66px;
+    color: #fff;
 }
 @media print{
     .impressao{
