@@ -18,7 +18,7 @@
                                 <select name="combo-destino" size="1">
                                     <option value="" disabled selected>Escolha o Destinatário</option>
                                     {% for emp in empresas %}
-                                    <option value="{{ emp.filial }}">{{ emp.id }} {{ emp.filial }}</option>
+                                    <option value="{{ emp.filial }}">{{ emp.filial }}</option>
                                     {% endfor %}
                                 </select>
                             </form>
