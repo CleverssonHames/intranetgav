@@ -56,7 +56,7 @@
 			<select name=ComboFilial size=1 onchange="FilialBox.submit();">
 				<option value="" disabled selected>Filial</option>
 				{% for emp in empresas %}
-				<option value="{{ emp.filial }}">{{ emp.filial }}</option>
+				<option value="{{ emp.filial }}">{{emp.id}} {{ emp.filial }}</option>
 				{% endfor %}
 			</select>
 

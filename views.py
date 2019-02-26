@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.db.models import Q
 from .forms import PesquisaLojas
+from django.http import Http404
 
 from .models import Linksites, DeptosFiles, Filial
 
@@ -41,9 +42,9 @@ def empresa_esc(request):
 	empresas = Filial.objects.filter(bandeira='Escritorio').order_by('filial')
 	return render(request, 'intranet/lojas.html', {'empresas': empresas})
 	
-def filtro_loja(resquest, pk):
-	empresas = Filial.objects.filter(pk=pk)
-	return render(request, 'intranet/lojas.html', {'empresas':empresas})
+def filtro_filial(resquest):
+	empresas = Filial.objects.all().order_by('filial')
+	return render(request, 'intranet/testeform.html', {'empresas':empresas})
 	
 def filtro_cidade(resquest, cidade):
 	fcidade = Filial.objects.filter(cidade=cidade)
@@ -54,20 +55,9 @@ def filtro_estado(resquest, estado):
 	return render(request, 'intranet/lojas.html', {'festado':festado})
 
 def teste(request):
-	form=PesquisaLojas()
 	empresas = Filial.objects.all().order_by('filial')
-<<<<<<< HEAD
-	estados = Filial.objects.values('estado').distinct()
-	cidades = Filial.objects.values('cidade').distinct()
-	return render(request, 'intranet/testeform.html', {'empresas':empresas, 'cidades': cidades, 'estados':estados})
-=======
-	return render(request, 'intranet/testeform.html', {'empresas':empresas, form='form'})
-	
-	
-	
+	return render(request, 'intranet/testeform.html', {'empresas':empresas})
 
-
->>>>>>> bc047983b0f1ed3c72778ff8c7de423bac49d21a
 
 def etiqueta_correio(request):
 	return render(request, 'intranet/etiqueta_correios.html', {})
