@@ -60,8 +60,8 @@ def teste(request):
 
 
 def etiqueta_correio(request):
-	return render(request, 'intranet/etiqueta_correios.html', {})
-	# empresas = Filial.objects.all().order_by('filial')
-	# estados = Filial.objects.values('estado').distinct()
-	# cidades = Filial.objects.values('cidade').distinct()
-	# return render(request, 'intranet/etiqueta_correio.html', {'empresas':empresas, 'cidades': cidades, 'estados':estados})
+	empresas = Filial.objects.all().order_by('filial')
+	estados = Filial.objects.values('estado').distinct()
+	cidades = Filial.objects.values('cidade').distinct()
+	return render(request, 'intranet/etiqueta_correio.html', {'empresas':empresas, 'cidades': cidades, 'estados':estados})
+	# return render(request, 'intranet/etiqueta_correios.html', {})

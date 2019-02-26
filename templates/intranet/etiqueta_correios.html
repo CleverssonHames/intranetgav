@@ -12,12 +12,16 @@
         <div class="lateral noprint">
             <div class="corpo-2">
                     <div class="input-field col s12 box-destino">
-                            <select>
-                                <option value="" disabled selected>Escolha o Destinatáio</option>
-                                <option value="1">Option 1</option>
-                                <option value="2">Option 2</option>
-                                <option value="3">Option 3</option>
-                            </select>
+                            <form name="destino-box" action="{% url 'empresa_avenida' %}">
+                                {% csrf_token %}
+                                {{ form }}
+                                <select name="combo-destino" size="1">
+                                    <option value="" disabled selected>Escolha o Destinatário</option>
+                                    {% for emp in empresas %}
+                                    <option value="{{ emp.filial }}">{{ emp.id }} {{ emp.filial }}</option>
+                                    {% endfor %}
+                                </select>
+                            </form>
                     </div>
             </div>
             <div>
