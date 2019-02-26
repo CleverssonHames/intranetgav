@@ -54,9 +54,9 @@ def filtro_estado(resquest, estado):
 	return render(request, 'intranet/lojas.html', {'festado':festado})
 
 def teste(request):
-	form=PesquisaLojas()
+	#form=PesquisaLojas()
 	empresas = Filial.objects.all().order_by('filial')
-	return render(request, 'intranet/testeform.html', {'empresas':empresas, form='form'})
+	return render(request, 'intranet/testeform.html', {'empresas':empresas})
 	
 	
 	
