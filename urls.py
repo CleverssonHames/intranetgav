@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from . import views
+from . import views, detalhe
 from django.conf.urls.static import static
 from django.conf import settings
 
@@ -17,6 +17,7 @@ urlpatterns = [
    path('teste', views.teste, name='teste'),
    path('etiqueta_correio', views.etiqueta_correio, name='etiqueta_correio'),
    path('filtro/<int:loja>/', views.filtro, name='filtro'),
+   path('detalhe/<int:id>/', detalhe.as_view(), name='detalhe'),
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

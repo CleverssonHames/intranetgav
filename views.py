@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.db.models import Q
 from .forms import PesquisaLojas
 from django.http import Http404
+from django.views.generic import DetailView
 
 from .models import Linksites, DeptosFiles, Filial
 
@@ -59,4 +60,12 @@ def filtro(request, loja):
 	loja = int(loja)
 	lojas_detail = Filial.objects.filter(id=loja)
 	return render(request, 'intranet/filtro.html', {'lojas_detail':lojas_detail})
+
+class detalhe(DetailView):
+	template_name = 'intranet/filtro.html'
+	queyset = Filial.objects.all()
+
+	def get_object(self):
+		id_ = self.kwargs.get("id")
+		return get_object_or_404(Filial, id=id_)
 
