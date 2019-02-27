@@ -42,9 +42,6 @@ def empresa_esc(request):
 	empresas = Filial.objects.filter(bandeira='Escritorio').order_by('filial')
 	return render(request, 'intranet/lojas.html', {'empresas': empresas})
 	
-def filtro_filial(resquest):
-	empresas = Filial.objects.all().order_by('filial')
-	return render(request, 'intranet/testeform.html', {'empresas':empresas})
 	
 def filtro_cidade(resquest, cidade):
 	fcidade = Filial.objects.filter(cidade=cidade)
@@ -65,3 +62,8 @@ def etiqueta_correio(request):
 	# estados = Filial.objects.values('estado').distinct()
 	# cidades = Filial.objects.values('cidade').distinct()
 	# return render(request, 'intranet/etiqueta_correio.html', {'empresas':empresas, 'cidades': cidades, 'estados':estados})
+
+
+def filtro(request, id_filial):
+	empresas = Filial.objects.get(pk=id_filial)
+	return render(request, 'intranet/filtro.html', {'empresas':empresa})

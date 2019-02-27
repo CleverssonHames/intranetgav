@@ -1,0 +1,32 @@
+
+{% extends 'intranet/base.html' %}
+{%load staticfiles%}
+
+{% block title %} Empresas
+{% endblock title %}
+
+
+{% block body %}
+
+
+    <h5> A empresa filtrada foi {{empresas.filial}}</h5>
+
+  
+  {% block jquery %}
+  
+   <!-- Model -->
+   <script type="text/javascript">
+    $(document).ready(function(){
+    $('.modal').modal();
+	});
+	</script>
+	
+	<script type="text/javascript">
+	 $(document).ready(function(){
+		$('select').formSelect();
+	 });
+	 </script>
+	   
+  {% endblock jquery %}
+  
+{% endblock body %}
