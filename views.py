@@ -55,7 +55,7 @@ def etiqueta_correio(request):
 
 
 
-def filtro(request):
-	#empresas = Filial.objects.get(pk=id_filial)
+def filtro(request, pk):
+	empresas = Filial.objects.get(pk=pk)
 	return render(request, 'intranet/filtro.html', {})
 
