@@ -16,7 +16,7 @@ urlpatterns = [
    path('empresa_esc', views.empresa_esc, name='empresa_esc'),
    path('teste', views.teste, name='teste'),
    path('etiqueta_correio', views.etiqueta_correio, name='etiqueta_correio'),
-   path('filtro/<int:id>/', views.filtro, name='filtro'),
+   path('filtro/<slug:id>/', views.filtro, name='filtro'),
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
