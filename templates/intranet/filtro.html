@@ -10,7 +10,9 @@
 
 
     <!--h5> A empresa filtrada foi {{lojas_detail}}</h5> -->
-    <h5> A empresa filtrada foi detalhe {{Filial}}</h5>
+    {% for  x in Filail%}
+    <h5> A empresa filtrada foi detalhe {{x.filial}}</h5>
+    {% end for %}
 
   
   {% block jquery %}
