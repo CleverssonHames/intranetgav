@@ -18,7 +18,7 @@ urlpatterns = [
    path('teste', views.teste, name='teste'),
    path('etiqueta_correio', views.etiqueta_correio, name='etiqueta_correio'),
    path('filtro/<int:loja>/', views.filtro, name='filtro'),
-   path('detalhe/<slug:filial>/', detalhe.as_view(), name='detalhe'),
+   path('detalhe/<slug:id>/', detalhe.as_view(), name='detalhe'),
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
