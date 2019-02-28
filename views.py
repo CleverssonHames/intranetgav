@@ -64,6 +64,7 @@ def filtro(request, loja):
 class detalhe(DetailView):
 	template_name = 'intranet/filtro.html'
 	queyset = Filial.objects.all()
+	context_object_name = 'filial'
 
 	def get_object(self):
 		id_ = self.kwargs.get("id")
