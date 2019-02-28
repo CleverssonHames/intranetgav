@@ -63,10 +63,7 @@ def filtro(request, loja):
 
 class detalhe(DetailView):
 	template_name = 'intranet/filtro.html'
-	context_object_name = 'filial'
 	model = Filial
-	slug_field = 'id'
+	
 
-	def get_queryset(self):
-		return self.model.filter(id=self.request.id)
 
