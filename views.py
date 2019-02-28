@@ -67,5 +67,5 @@ class detalhe(DetailView):
 	model = Filial
 
 	def get_queryset(self):
-		return self.model.filter(id=self.request.id)
+		return self.model.filter(filial=self.request.filial)
 
