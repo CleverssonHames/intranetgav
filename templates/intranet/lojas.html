@@ -35,10 +35,10 @@
 	
 	<div class="col s3">
 		<h5>Filtros: </h5>
-		<form name="filialbox" method="POST" action="{% url 'filtro' emp.id %}">
+		<form name="filialbox"  action="{% url 'filtro' emp.id %}" method="POST">
 		{% csrf_token %}	
 		{{ form }}
-	  <select onchange="filialBox.submit();">
+	  <select size=1 onchange="filialBox.submit();">
 		  <option value="" disabled selected>Filial</option>
 		  {% for emp in empresas %}
 		 <option value="filial">{{ emp.filial }}</option>
