@@ -39,7 +39,7 @@
 	  <select>
 		  <option value="" disabled selected>Filial</option>
 		  {% for emp in empresas %}
-		  <option value="filial"><a href="{% url 'filtro/emp.id' %}" >{{ emp.filial }}</a></option>
+		  <option value="filial"><a href="{% url 'filtro' emp.id %}" >{{ emp.filial }}</a></option>
 		  {% endfor %}
 		</select>
 
