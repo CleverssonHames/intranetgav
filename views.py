@@ -58,8 +58,10 @@ def etiqueta_correio(request):
 
 def filtro(request, loja):
 	loja = int(loja)
-	lojas_detail = Filial.objects.filter(id=loja)
-	return render(request, 'intranet/filtro.html', {'lojas_detail':lojas_detail})
+	empresas = Filial.objects.filter(id=loja)
+	estados = Filial.objects.values('estado').distinct()
+	cidades = Filial.objects.values('cidade').distinct()
+	return render(request, 'intranet/lojas.html', {'empresas':empresas, 'cidades': cidades, 'estados':estados})
 
 class detalhe(DetailView):
 	template_name = 'intranet/filtro.html'
