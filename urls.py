@@ -17,7 +17,7 @@ urlpatterns = [
    path('empresa_esc', views.empresa_esc, name='empresa_esc'),
    path('teste', views.teste, name='teste'),
    path('etiqueta_correio', views.etiqueta_correio, name='etiqueta_correio'),
-   path('filtro/<int:loja>', views.filtro, name='filtro'),
+   path('filtro/<int:loja/>', views.filtro, name='filtro'),
    path('detalhe/<int:loja>', detalhe.as_view(), name='detalhe'),
 
 
