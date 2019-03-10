@@ -38,7 +38,7 @@
 	<div class="col s3">
 		<h5>Filtros: </h5>
 
-		<form name="filialbox" action="{% url 'filtro' 10 %}" method="POST">
+		<form name="filialbox" action="{% url 'filtro' empresas.id %}" method="POST">
 			{% csrf_token %}
 			{{ form }}
 			<select size=1 onchange="filialBox.submit();">
