@@ -35,13 +35,16 @@
 	
 	<div class="col s3">
 		<h5>Filtros: </h5>
-			
+		<form action="{% url 'filtro' emp.id %}">
+		{% csrf_token %}	
 	  <select >
 		  <option value="" disabled selected>Filial</option>
 		  {% for emp in empresas %}
-		  <a href="{% url 'filtro' emp.id %}" ><option value="filial">{{ emp.filial }}</option></a>
+		 <option value="filial">{{ emp.filial }}</option>
 		  {% endfor %}
 		</select>
+		<button type="submit">Buscar</button>
+		</form>>
 
 		<select>
 			<option value="" disabled selected>Estado</option>
