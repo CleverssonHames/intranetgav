@@ -36,10 +36,10 @@
 	<div class="col s3">
 		<h5>Filtros: </h5>
 			
-	  <select>
+	  <select >
 		  <option value="" disabled selected>Filial</option>
 		  {% for emp in empresas %}
-		  <option value="filial"><a href="{% url 'filtro' emp.id %}" >{{ emp.filial }}</a></option>
+		  <option value="{% url 'filtro' emp.id %}"><a href="{% url 'filtro' emp.id %}" >{{ emp.filial }}</a></option>
 		  {% endfor %}
 		</select>
 
