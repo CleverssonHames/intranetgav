@@ -41,7 +41,7 @@
 
 		<ul id="dropdown2" class="dropdown-content">
 			{% for emp in empresas %}
-			<li><a href="{% url 'filtro' emp.id %}">one<span class="badge">{{ emp.filial }}</span></a></li>
+			<li><a href="{% url 'filtro' emp.id %}">{{ emp.filial }}<span class="badge"></span></a></li>
 			{% endfor %}
 		</ul>
 		<a class="btn dropdown-trigger" href="#!" data-target="dropdown2">Filiais<i class="material-icons right">arrow_drop_down</i></a>
@@ -51,7 +51,7 @@
 			<option value="" disabled selected>Filial</option>
 			{% for emp in empresas %}
 			<option value="filial"><a href="{% url 'filtro' emp.id %}">{{ emp.filial }}</a></option>
-			
+			{% endfor %}
 		</select>
 
 		
