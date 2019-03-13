@@ -44,7 +44,18 @@
 			<li><a href="{% url 'filtro' emp.id %}">{{ emp.filial }}</a></li>
 			{% endfor %}
 		</ul>
-		<a class="btn dropdown-trigger" href="#!" data-target="dropdown2">Filiais<i class="material-icons right">arrow_drop_down</i></a>
+		<a class="btn dropdown-trigger" href="#!" data-target="dropdown2">Dropdown<i class="material-icons right">arrow_drop_down</i></a>
+
+
+		  <!-- Dropdown Trigger -->
+		  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a>
+
+		  <!-- Dropdown Structure -->
+		  <ul id='dropdown1' class='dropdown-content'>
+		    {% for emp in empresas %}
+			<li><a href="#!">{{ emp.filial }}</a></li>
+			{% endfor %}
+		  </ul>
 
 		<!--
 		<select>
@@ -81,6 +92,10 @@
 	$(document).ready(function () {
 		$('select').formSelect();
 	});
+</script>
+
+<script type="text/javascript">
+	$('.dropdown-trigger').dropdown();
 </script>
 
 {% endblock jquery %}
