@@ -26,7 +26,8 @@
 					<strong>Bairro:</strong> {{ emp.bairro }} <strong>Endereço:</strong> {{ emp.logradouro }}
 					<strong>CEP:</strong> {{ emp.cep }}</br>
 					<strong>CNPJ:</strong> {{ emp.cnpj }}</br>
-					<strong>Tel. Fixo:</strong> {{ emp.tel_fixo }} <strong>Celular 1:</strong> {{ emp.celular_1 }} <strong>Celular
+					<strong>Tel. Fixo:</strong> {{ emp.tel_fixo }} <strong>Celular 1:</strong> {{ emp.celular_1 }}
+					<strong>Celular
 						2:</strong> {{ emp.celular_2 }}
 				</p>
 				<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
@@ -38,17 +39,14 @@
 	<div class="col s3">
 		<h5>Filtros: </h5>
 
-		<form name="filialbox" action="{% url 'filtro' emp.id %}" method="POST">
-			{% csrf_token %}
-			{{ form }}
-			<select size=1 onchange="filialBox.submit();">
-				<option value="" disabled selected>Filial</option>
-				{% for emp in empresas %}
-				<option value="{{ emp.id }}">{{ emp.filial }}</option>
-				{% endfor %}
-			</select>
-			<button type="submit">Buscar</button>
-		</form>
+
+		<select>
+			<option value="" disabled selected>Filial</option>
+			{% for emp in empresas %}
+			<option value="filial"><a href="{% url 'filtro' emp.id %}">{{ emp.filial }}</a></option>
+			{% endfor %}
+		</select>
+
 
 		<select>
 			<option value="" disabled selected>Estado</option>
