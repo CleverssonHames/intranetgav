@@ -22,10 +22,16 @@ def departamento(request):
 	return render(request, 'intranet/departamento.html', {'ti':ti})
 
 def lojas(request):
-	empresas = Filial.objects.all().order_by('filial')
-	estados = Filial.objects.values('estado').distinct()
-	cidades = Filial.objects.values('cidade').distinct()
-	return render(request, 'intranet/lojas.html', {'empresas':empresas, 'cidades': cidades, 'estados':estados})
+
+	filtro_loja = request.GET.get('pesquisa', None)
+
+	if filtro_loja:
+		empresas = Filial.objects.filter(filial=filtro_loja)
+	else:
+		empresas = Filial.objects.all().order_by('filial')
+	#estados = Filial.objects.values('estado').distinct()
+	#cidades = Filial.objects.values('cidade').distinct()
+	return render(request, 'intranet/lojas.html', {'empresas':empresas})
 
 def empresa_avenida(request):
 	empresas = Filial.objects.filter(bandeira='Avenida').order_by('filial')	
