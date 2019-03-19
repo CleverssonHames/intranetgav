@@ -26,7 +26,7 @@ def lojas(request):
 	filtro_loja = request.GET.get('pesquisa', None)
 
 	if filtro_loja:
-		empresas = Filial.objects.filter(filial=filtro_loja)
+		empresas = Filial.objects.filter(filial__icontains=filtro_loja)
 	else:
 		empresas = Filial.objects.all().order_by('filial')
 	#estados = Filial.objects.values('estado').distinct()
